@@ -1,0 +1,42 @@
+[project]
+name = "graph-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "bioc>=2.1",
+    "boto3>=1.36.24",
+    "conllu>=6.0.0",
+    "datasets>=3.3.1",
+    "deprecated>=1.2.18",
+    "ftfy>=6.3.1",
+    "gdown>=5.2.0",
+    "gliner>=0.2.16",
+    "gliner-spacy>=0.0.11",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "loguru>=0.7.3",
+    "lxml>=5.3.1",
+    "networkx>=3.4.2",
+    "pillow>=11.1.0",
+    "pip>=25.0.1",
+    "pyaml>=25.1.0",
+    "pydantic>=2.10.6",
+    "segtok>=1.5.11",
+    "sentencepiece>=0.2.0",
+    "seqeval>=1.2.2",
+    "spacy>=3.8.4",
+    "taskipy>=1.14.1",
+    "torch>=2.6.0",
+    "transformer-smaller-training-vocab>=0.4.0",
+    "transformers>=4.49.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.6",
+]
+
+[tool.taskipy.tasks]
+download_model = "uv run spacy download en_core_web_md"
